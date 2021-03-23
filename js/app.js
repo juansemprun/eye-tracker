@@ -27,17 +27,11 @@ webgazer.setGazeListener((data) => {
 
    if (data.x < viewportWidth / 2 && data.y < viewportHeight / 2) {
       upLeft.style.backgroundColor = colors.observedContainer
-   }
-
-   if (data.x > viewportWidth / 2 && data.y < viewportHeight / 2) {
+   } else if (data.x > viewportWidth / 2 && data.y < viewportHeight / 2) {
       upRight.style.backgroundColor = colors.observedContainer
-   }
-
-   if (data.x < viewportWidth / 2 && data.y > viewportHeight / 2) {
+   } else if (data.x < viewportWidth / 2 && data.y > viewportHeight / 2) {
       downLeft.style.backgroundColor = colors.observedContainer
-   }
-
-   if (data.x > viewportWidth / 2 && data.y > viewportHeight / 2) {
+   } else if (data.x > viewportWidth / 2 && data.y > viewportHeight / 2) {
       downRight.style.backgroundColor = colors.observedContainer
    }
 
